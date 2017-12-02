@@ -1,0 +1,9 @@
+server:
+  port: 7200
+spring:
+  application:
+    name: service-zipkin
+eureka:
+  client:
+      serviceUrl:
+          defaultZone: http://127.0.0.1:8080/eureka/

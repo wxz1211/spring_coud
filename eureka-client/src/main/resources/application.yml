@@ -1,0 +1,12 @@
+eureka:
+   client:
+      service-url.defaultZone: http://127.0.0.1:8080/eureka/
+   instance:
+     prefer-ip-address: true
+server:
+  port: 8081
+spring:
+  zipkin:
+    base-url: http://127.0.0.1:7200
+  application:
+    name: service-user

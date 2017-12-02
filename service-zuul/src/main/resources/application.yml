@@ -1,0 +1,16 @@
+eureka:
+   client:
+       service-url.defaultZone: http://127.0.0.1:8080/eureka/
+server:
+    port: 8085
+spring:
+    zipkin:
+        base-url: http://127.0.0.1:7200
+    application:
+        name: service-zuul
+zuul:
+    routes:
+       api-a.path: /api-a/**
+       api-a.serviceId: service-ribbon
+       api-b.path: /api-b/**
+       api-b.serviceId: service-feign
